@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_sm"
+    android:gravity="center_vertical"
+    android:background="@drawable/card_bg_2"
+    android:layout_margin="@dimen/spacing_xxs">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/spacing_sm"
+        android:text="App Name"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:gravity="center_vertical"/>
+</LinearLayout>

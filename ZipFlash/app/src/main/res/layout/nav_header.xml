@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_drawer_header"
+    android:padding="@dimen/spacing_md"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:gravity="bottom">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="ZipFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"/>
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:text="@string/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:textAppearance="?attr/textAppearanceBodySmall"/>
+</LinearLayout>

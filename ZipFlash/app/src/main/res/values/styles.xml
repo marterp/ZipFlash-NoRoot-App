@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Material 3 Button Styles -->
+    <style name="M3Button" parent="Widget.MaterialComponents.Button"/>
+    <style name="M3Button.Tonal" parent="Widget.MaterialComponents.Button"/>
+    <style name="M3Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton"/>
+    <style name="M3Button.Text" parent="Widget.MaterialComponents.Button.TextButton"/>
+    <!-- Dark PopupMenu style -->
+    <style name="DarkPopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@color/bg_elevated</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:itemBackground">@color/bg_card</item>
+    </style>
+
+    <!-- Dark SearchView style -->
+    <style name="SearchViewDark" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@color/bg_elevated</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="queryHint">Search modules...</item>
+        <item name="iconifiedByDefault">true</item>
+    </style>
+
+    <!-- Dialog overlay styles -->
+    <style name="CustomDialogTheme" parent="ThemeOverlay.Material3.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+
+</resources>

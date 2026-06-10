@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/nav_group_main">
+        <item
+            android:id="@+id/nav_flash"
+            android:title="Flash"
+            android:icon="@drawable/ic_flash"/>
+
+        <item
+            android:id="@+id/nav_shell"
+            android:title="Shell"
+            android:icon="@drawable/shell"/>
+
+        <item
+            android:id="@+id/nav_modules_manager"
+            android:title="Manage Modules"
+            android:icon="@drawable/ic_module"/>
+
+        <item
+            android:id="@+id/nav_modules"
+            android:title="Download Modules"
+            android:icon="@drawable/ic_module_down"/>
+    </group>
+
+    <group android:id="@+id/nav_group_footer">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:title="About"
+            android:icon="@drawable/info"/>
+    </group>
+</menu>

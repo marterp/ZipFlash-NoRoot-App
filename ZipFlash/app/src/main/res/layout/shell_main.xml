@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg_primary"/>
+
+    <!-- Command input and Run button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_sm">
+
+        <EditText
+            android:id="@+id/etCommand"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height"
+            android:hint="Enter command"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:background="@drawable/edit_bg"
+            android:padding="@dimen/spacing_sm"
+            android:fontFamily="monospace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRun"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Run"
+            style="@style/M3Button"
+            android:layout_marginStart="@dimen/spacing_xxs"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:contentDescription="Run command" />
+    </LinearLayout>
+
+    <!-- Recent commands -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fadeScrollbars="true"
+        android:scrollbarFadeDuration="250"
+        android:scrollbarDefaultDelayBeforeFade="1000">
+
+        <LinearLayout
+            android:id="@+id/recent_commands_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_xs" />
+    </HorizontalScrollView>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_default" />
+
+    <!-- Output -->
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:padding="@dimen/spacing_sm"
+        android:textSize="12sp"
+        android:background="@color/bg_input"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="monospace"
+        android:textIsSelectable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+</LinearLayout>

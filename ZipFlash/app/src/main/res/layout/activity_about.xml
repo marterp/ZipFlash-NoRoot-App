@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/spacing_md">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_primary"
+            android:title="About"/>
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/imgAppIcon"
+            android:layout_width="@dimen/icon_size_xl"
+            android:layout_height="@dimen/icon_size_xl"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:contentDescription="App Icon"
+            android:layout_gravity="center" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZipFlash"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/spacing_sm"
+            android:paddingBottom="@dimen/spacing_xs"
+            android:layout_gravity="center"/>
+
+        <!-- No Root subtitle -->
+        <TextView
+            android:id="@+id/tvNoRoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Root"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <!-- Version -->
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:paddingVertical="@dimen/spacing_xs"
+            android:layout_gravity="center"/>
+
+        <!-- Developer -->
+        <TextView
+            android:id="@+id/tvDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer: @mister_p"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:paddingBottom="@dimen/spacing_md"
+            android:layout_gravity="center"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description"
+            android:textColor="@color/text_secondary"
+            android:textColorLink="@color/accent_primary"
+            android:textSize="14sp"
+            android:paddingBottom="@dimen/spacing_md"
+            android:lineSpacingExtra="2dp"
+            android:autoLink="email"
+            android:linksClickable="true"
+            android:inputType="textMultiLine"
+            android:scrollHorizontally="false"
+            android:ellipsize="none"
+            android:breakStrategy="simple"
+            android:paddingHorizontal="@dimen/spacing_md"/>
+
+        <!-- Social Links Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_xs"
+            android:paddingHorizontal="@dimen/spacing_md">
+
+            <!-- GitHub -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGithub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GitHub"
+                style="@style/M3Button.Tonal"
+                app:icon="@drawable/github_icon"
+                app:iconGravity="textStart"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- YouTube -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnYouTube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YouTube"
+                style="@style/M3Button.Tonal"
+                app:icon="@drawable/youtube_icon"
+                app:iconGravity="textStart"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- TikTok (hidden) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTikTok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TikTok"
+                style="@style/M3Button.Tonal"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- Facebook (hidden) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                style="@style/M3Button.Tonal"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- ZipFlash Website -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnZipflashWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visit ZipFlash Website"
+                style="@style/M3Button.Tonal"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- Support Me -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDonate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support Me"
+                style="@style/M3Button"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_default"
+                android:layout_marginVertical="@dimen/spacing_sm"/>
+
+            <!-- Terms and Privacy -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTermsCond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms And Privacy"
+                style="@style/M3Button.Text"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <!-- Contributors (hidden) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContributors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contributors"
+                style="@style/M3Button.Tonal"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

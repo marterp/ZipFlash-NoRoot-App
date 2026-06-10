@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="flash"
+        android:enabled="true"
+        android:icon="@drawable/ic_flash"
+        android:shortcutShortLabel="@string/shortcut_flash"
+        android:shortcutLongLabel="@string/shortcut_flash_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zipflash.mrp"
+            android:targetClass="com.zipflash.mrp.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="shell"
+        android:enabled="true"
+        android:icon="@drawable/shell"
+        android:shortcutShortLabel="@string/shortcut_shell"
+        android:shortcutLongLabel="@string/shortcut_shell_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zipflash.mrp"
+            android:targetClass="com.zipflash.mrp.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="modules"
+        android:enabled="true"
+        android:icon="@drawable/ic_module"
+        android:shortcutShortLabel="@string/shortcut_modules"
+        android:shortcutLongLabel="@string/shortcut_modules_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zipflash.mrp"
+            android:targetClass="com.zipflash.mrp.MainActivity" />
+    </shortcut>
+</shortcuts>
