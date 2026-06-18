@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">ZipFlash</string>
+    <string name="app_version">v1.0.0.9</string>
+	<string name="app_description"><![CDATA[
+ ZipFlash is a lightweight and fast ZIP flashing utility for Android.<br>
+It allows you to flash scripts directly on your device using Shizuku.<br>
+It also includes a built-in shell to execute commands. Ideal for advanced users.<br><br>
+"I made this app to flash my compressed ZIP files and run scripts directly on my device.<br><br> Works both root and non-root."<br><br>
+Features:<br>
+- Flash compressed ZIP files easily<br>
+- Run custom scripts<br>
+- Built-in shell for command execution<br>
+- Lightweight and fast<br>
+- And more soon..<br><br>
+If you encounter any issues/problems or bugs, please contact me via email. contact: misterp321nimda@gmail.com<br><br>
+For more info and updates visit:
+<font color="#2196F3"><a href="https://zip-flash-modules.vercel.app/">zipflash website</a></font>
+		]]></string>
+        
+        
+    <!-- res/values/strings.xml -->
+    <string name="update_dialog_title">Update Available!</string>
+    <string name="update_dialog_title_description">Dialog title: Update Available</string>
+    <string name="changelog_default">Changelog will be displayed here.</string>
+    <string name="changelog_description">Changelog for the update</string>
+    <string name="update_button_text">Update!</string>
+    <string name="update_button_description">Button to start the update</string>
+	
+	
+	
+	<string name="enabling_module">Enabling %1$s…</string>
+	<string name="disabling_module">Disabling %1$s…</string>
+	<string name="removing_module">Removing %1$s…</string>
+	<string name="confirm_remove_message">Are you sure you want to remove the module %1$s?</string>
+	<string name="shizuku_missing">Shizuku is not available. Please grant permissions.</string>
+	<string name="error_enabling">Error enabling %1$s: %2$s</string>
+	<string name="error_disabling">Error disabling %1$s: %2$s</string>
+	<string name="error_deleting">Error deleting %1$s: %2$s</string>
+	<string name="dialog_content">
+		Welcome to ZipFlash No Root.
+\n\n
+		By installing and using this application, you acknowledge and agree to the following terms and conditions:
+\n\n
+		• Purpose: ZipFlash No Root allows you to flash ZIP files and run scripts directly on your device without root access. Certain features require Shizuku, a third-party service that enables higher system privileges in a safe manner.
+\n\n
+		• User Responsibility: This app modifies specific device settings and manages modules based on your commands. Please use all features responsibly. Any misconfiguration, instability, or damage caused by third-party modules or scripts is solely your responsibility.
+\n\n
+		• Data Privacy: We do not collect, store, or share your personal data. All modules and actions executed within the app remain local to your device. The application does not transmit information to external servers or third parties.
+\n\n
+		• Permissions: The app may request permission to use specific system features to operate correctly. Granting these permissions is entirely at your discretion and is required for full functionality.
+\n\n
+		• Updates and Changes: Feature updates may add, modify, or remove options to enhance stability, security, and usability. Please review the changelog and documentation for details after each update.
+\n\n
+		• Support: For usage questions, bug reports, or technical issues, please refer to the official GitHub releases page or contact the developer.
+\n\n
+		• Liability Disclaimer: ZipFlash No Root is provided "as is" without any warranty, express or implied. The developer is not responsible for any data loss, device malfunction, or indirect damages arising from the use or misuse of this application.
+\n\n\n
+		Open Source Licenses:
+\n
+		androidx.appcompat:appcompat:1.0.0 (Apache-2.0)
+		Copyright 2018 The Android Open Source Project
+		http://www.apache.org/licenses/LICENSE-2.0
+\n\n
+		Additional open source libraries may be used in this application. Their respective licenses and attributions are available upon request.
+\n\n
+		Copyright © 2025 ZipFlash. All rights reserved.
+		</string>
+        
+</resources>

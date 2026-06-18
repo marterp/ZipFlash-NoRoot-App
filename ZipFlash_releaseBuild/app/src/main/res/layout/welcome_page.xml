@@ -1,0 +1,66 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+   
+
+    <!-- Top spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Centered content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to ZipFlash!"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="monospace"/>
+
+        <!-- Engaging message TextView -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanks for installing ZipFlash!\n\nReady to unleash your phone’s full potential?"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingBottom="24dp"
+            android:textColor="#CCCCCC"
+            android:fontFamily="monospace"/>
+
+        <!-- Get Started Button -->
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:fontFamily="monospace"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+
+    <!-- Bottom spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

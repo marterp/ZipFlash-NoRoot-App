@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@drawable/popup_bg"
+	android:padding="12dp"
+	android:gravity="center">
+
+	<EditText
+		android:id="@+id/searchApp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="Search apps..."
+		android:padding="10dp"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#888888"
+		android:background="@drawable/btn_normal"
+		android:inputType="text"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:orientation="vertical">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recyclerApps"
+			android:layout_width="match_parent"
+			android:layout_height="450dp"
+			android:scrollbars="vertical"
+			android:paddingTop="8dp"/>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/btnClose"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Close"
+		android:textColor="#FFFFFF"
+		android:background="@drawable/btn_normal"
+		android:padding="10dp"/>
+
+</LinearLayout>
+

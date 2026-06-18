@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#111111"
+	android:fontFamily="monospace">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="#111111"
+		android:title="Settings"
+		android:titleTextColor="#CCCCCC"
+		android:fontFamily="monospace"
+		android:elevation="4dp"/>
+
+	<ScrollView
+		android:id="@+id/scrollSettings"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/toolbar"
+		android:padding="16dp"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Settings"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:textColor="#FFFFFF"
+				android:paddingBottom="8dp"
+				android:paddingTop="0dp"
+				android:fontFamily="monospace"/>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:paddingTop="4dp">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Allow Any File"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Allow running scripts from any file type."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/switch_any_file"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:contentDescription="Toggle run any file"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:paddingTop="4dp">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Optimize Run Script"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Enhances script execution for better performance."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/optimize_switch"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:contentDescription="Toggle optimize script"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:padding="16dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Show App Activities"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Displays all app activities in the app list."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/switch_show_activities"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:contentDescription="Toggle show app activities"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="1dp"
+						android:background="#333333"
+						android:layout_marginHorizontal="8dp"/>
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:padding="16dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Show System Apps"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Includes system apps in the app list."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/switch_show_system"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:contentDescription="Toggle show system apps"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Experimental/Advanced Features"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:textColor="#FFFFFF"
+				android:paddingBottom="8dp"
+				android:paddingTop="16dp"
+				android:fontFamily="monospace"/>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222"
+				android:alpha="0.5">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:padding="16dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@drawable/card_bg"
+						android:gravity="center_vertical">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Allow Other Module"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Enables integration with external modules."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/switch_module_settings"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:enabled="false"
+							android:alpha="0.5"
+							android:contentDescription="Toggle advanced module settings"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222"
+				android:alpha="0.5"
+				android:visibility="gone">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:padding="16dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical">
+
+						<LinearLayout
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Game Mode"
+								android:textColor="#FFFFFF"
+								android:fontFamily="monospace"/>
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Optimizes app for gaming performance."
+								android:textColor="#BBBBBB"
+								android:textSize="12sp"
+								android:fontFamily="monospace"
+								android:paddingRight="4dp"
+								android:paddingTop="2dp"/>
+
+						</LinearLayout>
+
+						<androidx.appcompat.widget.SwitchCompat
+							android:id="@+id/switch_game_mode"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:enabled="false"
+							android:alpha="0.5"
+							android:contentDescription="Toggle game mode"
+							style="@style/CustomSwitch"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Customize"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:textColor="#FFFFFF"
+				android:paddingBottom="8dp"
+				android:paddingTop="16dp"
+				android:fontFamily="monospace"/>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Fonts"
+						android:textStyle="bold"
+						android:textSize="16sp"
+						android:textColor="#FFFFFF"
+						android:paddingBottom="8dp"
+						android:fontFamily="monospace"/>
+
+					<RadioGroup
+						android:id="@+id/radio_font"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<RadioButton
+							android:id="@+id/radio_font_sans"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Sans"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"
+							android:contentDescription="Select sans font"/>
+
+						<RadioButton
+							android:id="@+id/radio_font_serif"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Serif"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"
+							android:contentDescription="Select serif font"/>
+
+						<RadioButton
+							android:id="@+id/radio_font_monospace"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Monospace"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"
+							android:contentDescription="Select monospace font"/>
+
+					</RadioGroup>
+
+				</LinearLayout>
+				
+				
+
+			</com.google.android.material.card.MaterialCardView>
+			
+			<!-- Theme -->
+			<!-- Theme selector -->
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Theme"
+						android:textStyle="bold"
+						android:textSize="16sp"
+						android:textColor="#FFFFFF"
+						android:paddingBottom="8dp"
+						android:fontFamily="monospace"/>
+
+					<RadioGroup
+						android:id="@+id/radio_theme"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<RadioButton
+							android:visibility="gone"
+							android:id="@+id/radio_theme_light"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Light"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"/>
+
+						<RadioButton
+							android:id="@+id/radio_theme_dark"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Dark"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"/>
+
+						<RadioButton
+							android:id="@+id/radio_theme_system"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Follow system"
+							android:textColor="#FFFFFF"
+							android:buttonTint="@color/radio_button_tint"
+							android:fontFamily="monospace"/>
+
+					</RadioGroup>
+					
+					
+				</LinearLayout>
+				
+				
+			
+			</com.google.android.material.card.MaterialCardView>
+			
+			<!-- Language selector row -->
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:layout_marginBottom="12dp"
+				android:backgroundTint="#222222">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/card_bg">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Language"
+						android:textStyle="bold"
+						android:textSize="16sp"
+						android:textColor="#FFFFFF"
+						android:paddingBottom="8dp"
+						android:fontFamily="monospace"/>
+
+					<Spinner
+						android:id="@+id/spinner_language"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:popupTheme="@style/AppTheme"
+						android:spinnerMode="dropdown"/>
+				</LinearLayout>
+			</com.google.android.material.card.MaterialCardView>
+			
+			
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Others"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:textColor="#FFFFFF"
+				android:paddingBottom="8dp"
+				android:paddingTop="16dp"
+				android:fontFamily="monospace"/>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingBottom="20dp">
+
+				<Button
+					android:id="@+id/btn_grant_shizuku"
+					android:layout_width="match_parent"
+					android:layout_height="48dp"
+					android:text="Grant Shizuku"
+					android:background="@drawable/btn_normal"
+					android:textColor="#FFFFFF"
+					android:stateListAnimator="@null"
+					android:fontFamily="monospace"
+					android:contentDescription="Open developer options"/>
+
+				<Button
+					android:id="@+id/btn_dev_options"
+					android:layout_width="match_parent"
+					android:layout_height="48dp"
+					android:text="Developer Options"
+					android:background="@drawable/btn_normal"
+					android:textColor="#FFFFFF"
+					android:stateListAnimator="@null"
+					android:fontFamily="monospace"
+					android:contentDescription="Open developer options"
+					android:layout_marginTop="8dp"/>
+				
+				<Button
+					android:id="@+id/btn_clear_cache"
+					android:layout_width="match_parent"
+					android:layout_height="48dp"
+					android:text="Clear Cache"
+					android:layout_marginTop="8dp"
+					android:stateListAnimator="@null"
+					android:fontFamily="monospace"
+					android:layout_marginBottom="8dp"
+					android:background="@drawable/btn_normal"
+					android:textColor="#FFFFFF" />
+
+				<Button
+					android:id="@+id/btn_reset_defaults"
+					android:layout_width="match_parent"
+					android:layout_height="48dp"
+					android:text="Reset to Defaults"
+					android:background="@drawable/btn_normal"
+					android:textColor="#FFFFFF"
+					android:layout_marginTop="8dp"
+					android:stateListAnimator="@null"
+					android:fontFamily="monospace"
+					android:contentDescription="Reset settings to defaults"/>
+
+			</LinearLayout>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="12dp"
+				app:cardElevation="2dp"
+				android:backgroundTint="#222222"
+				android:visibility="gone">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="16dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<Button
+						android:id="@+id/btn_show_intro"
+						android:layout_width="match_parent"
+						android:layout_height="48dp"
+						android:text="Permission"
+						android:textColor="#FFFFFF"
+						android:background="#111111"
+						android:stateListAnimator="@null"
+						android:fontFamily="monospace"
+						android:contentDescription="Show permission introduction"/>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</RelativeLayout>
+

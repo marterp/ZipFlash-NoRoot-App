@@ -1,0 +1,70 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111111">
+
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#111111"
+        android:title="Permission"
+        android:titleTextColor="#CCCCCC"
+        android:elevation="4dp"/>
+
+    <!-- Top spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Centered content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checking Shizuku..."
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingBottom="24dp"
+            android:textColor="#CCCCCC"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:id="@+id/btnGrant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grant"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:fontFamily="monospace"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btnShizukuAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Shizuku"
+            android:visibility="gone"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+    </LinearLayout>
+
+    <!-- Bottom spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

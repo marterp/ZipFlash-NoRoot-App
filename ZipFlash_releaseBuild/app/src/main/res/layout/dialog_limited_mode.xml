@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="@drawable/popup_bg"
+	android:padding="24dp">
+
+	<TextView
+		android:id="@+id/tvTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Limited Mode!"
+		android:textSize="18sp"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
+		android:gravity="center"
+		android:paddingBottom="8dp"/>
+
+	<TextView
+		android:id="@+id/tvLimitedMessage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Permission is currently skipped.\n\nCertain system-level actions and module operations require Shizuku to function properly. Running in limited mode will disable some advanced features."
+		android:textSize="15sp"
+		android:textColor="@android:color/white"
+		android:lineSpacingExtra="4dp"
+		android:gravity="center"
+		android:paddingBottom="16dp"/>
+
+	<CheckBox
+		android:id="@+id/cbHideWarning"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Don't show again"
+		android:textColor="@android:color/white"
+		android:layout_gravity="center_horizontal"
+		android:paddingBottom="16dp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_marginTop="8dp">
+
+		<Button
+			android:id="@+id/btnGrant"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Grant Permission"
+			android:background="@drawable/btn_normal"
+			android:textColor="@android:color/white"
+			android:layout_marginEnd="6dp"/>
+
+		<Button
+			android:id="@+id/btnClose"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Close"
+			android:background="@drawable/btn_normal"
+			android:textColor="@android:color/white"
+			android:layout_marginStart="6dp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

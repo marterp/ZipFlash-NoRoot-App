@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="24dp"
+	android:gravity="center"
+	android:background="@drawable/popup_bg">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Are you sure you want to reset all settings to default?"
+		android:textColor="#FFFFFF"
+		android:textSize="16sp"
+		android:gravity="center"
+		android:paddingBottom="24dp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btnNo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="No"
+			android:background="@drawable/btn_normal"
+			android:textColor="#FFFFFF"
+			android:layout_marginEnd="8dp"/>
+
+		<Button
+			android:id="@+id/btnYes"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Yes"
+			android:background="@drawable/btn_normal"
+			android:textColor="#FFFFFF"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

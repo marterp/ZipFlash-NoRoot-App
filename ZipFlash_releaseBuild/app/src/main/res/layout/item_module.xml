@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardElevation="6dp"
+    card_view:cardBackgroundColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_bg_2">
+
+        <!-- Module Name -->
+        <TextView
+            android:id="@+id/moduleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Module Name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:paddingEnd="8dp"
+            android:fontFamily="monospace"/>
+
+        <!-- Enable/Disable Switch -->
+        <Switch
+            android:id="@+id/moduleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:thumbTint="@color/switch_thumb_tint"
+			android:trackTint="@color/switch_thumb_tint"
+            android:paddingEnd="8dp" />
+		
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/moduleDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_del_module"
+            android:tint="@android:color/holo_red_light" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
