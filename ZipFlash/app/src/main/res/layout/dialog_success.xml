@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="@dimen/spacing_lg"
+    android:padding="16dp"
     android:gravity="center"
     android:minWidth="280dp"
     android:maxWidth="290dp"
@@ -15,11 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_check_bold"
-        android:drawablePadding="@dimen/spacing_sm"
+        android:drawablePadding="8dp"
         android:textSize="48sp"
-        android:textStyle="bold"
+		android:textStyle="bold"
         android:visibility="visible"
-        android:textColor="@color/accent_success"/>
+        android:textColor="#4CAF50"/>
 
     <TextView
         android:id="@+id/tvMessage"
@@ -28,16 +28,17 @@
         android:text="Tweaks Applied!"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/text_primary"
+        android:textColor="#FFFFFF"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/spacing_lg"/>
+        android:layout_marginBottom="24dp"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OK"
-        style="@style/M3Button"
-        android:minWidth="120dp"/>
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_normal"
+        android:padding="10dp"/>
 
 </LinearLayout>

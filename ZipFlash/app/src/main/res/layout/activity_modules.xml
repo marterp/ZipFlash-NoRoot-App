@@ -4,29 +4,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_primary">
+    android:background="#111111">
 
     <!-- Toolbar -->
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/bg_primary"
-        android:title="Modules" />
+        android:background="#111111"
+        android:title="Modules"
+        android:titleTextColor="#CCCCCC"
+        android:fontFamily="monospace"
+        android:elevation="4dp" />
 
     <!-- SwipeRefreshLayout wrapping RecyclerView -->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@id/toolbar">
 
+        <!-- RecyclerView for modules -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerModules"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/spacing_sm"
+            android:padding="16dp"
             android:clipToPadding="false"
             android:scrollbars="vertical" />
 
@@ -40,7 +43,7 @@
         android:gravity="center"
         android:visibility="gone">
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
+        <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,18 +64,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No internet connection"
-            android:textColor="@color/accent_warning"
+            android:textColor="#FF0000"
             android:textSize="16sp"
             android:gravity="center"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/spacing_md"/>
+            android:layout_marginBottom="16dp"/>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btnRetry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:padding="10dp"
             android:text="Retry"
-            style="@style/M3Button.Tonal"
             android:layout_below="@id/errorMessage"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>

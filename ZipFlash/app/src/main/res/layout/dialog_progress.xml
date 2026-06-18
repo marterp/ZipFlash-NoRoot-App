@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="@dimen/spacing_md"
-    android:background="@drawable/popup_bg">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvProgress"
@@ -12,13 +11,12 @@
         android:layout_height="wrap_content"
         android:text="Downloading update..."
         android:textSize="16sp"
-        android:textColor="@color/text_primary"
-        android:paddingBottom="@dimen/spacing_sm" />
+        android:paddingBottom="8dp" />
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <ProgressBar
         android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

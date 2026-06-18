@@ -3,46 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_primary">
+    android:background="#111111">
 
-    <!-- Toolbar -->
-    <com.google.android.material.appbar.MaterialToolbar
+    <!-- Toolbar for Back Button and Menu -->
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/bg_primary"/>
+        android:background="#111111"
+        android:titleTextColor="#CCCCCC" />
 
     <!-- Command input and Run button -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/spacing_sm">
+        android:padding="8dp">
 
         <EditText
             android:id="@+id/etCommand"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="48dp"
             android:hint="Enter command"
-            android:textColor="@color/text_primary"
-            android:textColorHint="@color/text_muted"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
             android:background="@drawable/edit_bg"
-            android:padding="@dimen/spacing_sm"
+            android:padding="8dp"
             android:fontFamily="monospace" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btnRun"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Run"
-            style="@style/M3Button"
-            android:layout_marginStart="@dimen/spacing_xxs"
-            android:paddingHorizontal="@dimen/spacing_md"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_run"
+            android:fontFamily="monospace"
+            android:stateListAnimator="@null"
             android:contentDescription="Run command" />
     </LinearLayout>
 
-    <!-- Recent commands -->
+    <!-- Recent commands (horizontal scrollable list) -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,16 +58,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/spacing_xs" />
+            android:padding="4dp" />
     </HorizontalScrollView>
 
-    <!-- Divider -->
+    <!-- Divider for readability -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/border_default" />
+        android:background="#888888" />
 
-    <!-- Output -->
+    <!-- Output text -->
     <TextView
         android:id="@+id/tvOutput"
         android:layout_width="match_parent"
@@ -73,10 +75,10 @@
         android:layout_weight="1"
         android:scrollbars="vertical"
         android:fadeScrollbars="false"
-        android:padding="@dimen/spacing_sm"
+        android:padding="8dp"
         android:textSize="12sp"
-        android:background="@color/bg_input"
-        android:textColor="@color/text_secondary"
+        android:background="#111111"
+        android:textColor="#FFFFFF"
         android:fontFamily="monospace"
         android:textIsSelectable="true"
         android:enabled="true"

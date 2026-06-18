@@ -1,32 +1,74 @@
 <resources>
 
-    <!-- Material 3 Button Styles -->
-    <style name="M3Button" parent="Widget.MaterialComponents.Button"/>
-    <style name="M3Button.Tonal" parent="Widget.MaterialComponents.Button"/>
-    <style name="M3Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton"/>
-    <style name="M3Button.Text" parent="Widget.MaterialComponents.Button.TextButton"/>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Dark theme colors -->
+        <item name="colorPrimary">#333333</item> <!-- Dark gray for toolbar -->
+        <item name="colorPrimaryDark">#222222</item> <!-- Darker for status bar -->
+        <item name="colorAccent">@color/colorAccent</item> <!-- Keep your accent color -->
+        <item name="android:fontFamily">monospace</item>
+        <!-- res/values/themes.xml -->
+        
+        <!-- White text/icons for menu and toolbar -->
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- Toolbar title -->
+        <item name="android:textColorSecondary">@android:color/white</item> <!-- Menu icons/text -->
+        <item name="actionMenuTextColor">@android:color/white</item> <!-- Menu text -->
+        <item name="colorControlNormal">@android:color/white</item> <!-- Normal state icons -->
+        <item name="colorControlHighlight">@color/dark_selection</item> <!-- Hover/selected -->
+
+        <!-- PopupMenu and SearchView styles -->
+        <item name="popupMenuStyle">@style/DarkPopupMenu</item>
+        <item name="searchViewStyle">@style/SearchViewDark</item>
+    </style>
+
     <!-- Dark PopupMenu style -->
-    <style name="DarkPopupMenu" parent="Widget.MaterialComponents.PopupMenu">
-        <item name="android:popupBackground">@color/bg_elevated</item>
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:itemBackground">@color/bg_card</item>
+    <style name="DarkPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">#333333</item> <!-- Dark background -->
+        <item name="android:textColor">@android:color/white</item> <!-- White text -->
+        <item name="android:itemBackground">#444444</item> <!-- Slightly lighter for hover -->
     </style>
 
     <!-- Dark SearchView style -->
     <style name="SearchViewDark" parent="Widget.AppCompat.SearchView">
-        <item name="android:background">@color/bg_elevated</item>
-        <item name="android:textColor">@color/text_primary</item>
-        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:background">#444444</item> <!-- Dark search box -->
+        <item name="android:textColor">@android:color/white</item> <!-- White query text -->
+        <item name="android:textColorHint">#CCCCCC</item> <!-- Light gray hint -->
         <item name="queryHint">Search modules...</item>
         <item name="iconifiedByDefault">true</item>
     </style>
 
-    <!-- Dialog overlay styles -->
-    <style name="CustomDialogTheme" parent="ThemeOverlay.Material3.Dialog.Alert">
+    <!-- Existing dialog style -->
+    <style name="AppPickerDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+    
+    
+    <!-- Custom dialog theme -->
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowMinWidthMajor">90%</item>
         <item name="android:windowMinWidthMinor">90%</item>
-        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- White text -->
     </style>
+	
+	
+	<style name="TransparentAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+	
+	
+		<!-- Custom Switch Style -->
+		<style name="CustomSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+			<item name="thumbTint">@color/switch_thumb</item>
+			<item name="trackTint">@color/switch_track</item>
+		</style>
+	
 
 </resources>

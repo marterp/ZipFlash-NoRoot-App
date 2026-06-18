@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_primary">
+    android:background="#111111">
 
-    <!-- Toolbar -->
-    <com.google.android.material.appbar.MaterialToolbar
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/bg_primary"
-        android:title="Permissions"/>
+        android:background="#111111"
+        android:title="Welcome"
+        android:titleTextColor="#CCCCCC"
+        android:elevation="4dp"/>
 
     <!-- Top spacer -->
     <Space
@@ -25,36 +27,45 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingHorizontal="@dimen/spacing_md">
+        android:gravity="center_horizontal">
 
+        <!-- Welcome / Permissions message -->
         <TextView
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome to ZipFlash!"
             android:textSize="18sp"
-            android:textStyle="bold"
             android:gravity="center"
-            android:paddingBottom="@dimen/spacing_lg"
-            android:textColor="@color/text_primary"/>
+            android:paddingBottom="24dp"
+            android:textColor="#CCCCCC"
+            android:fontFamily="monospace"/>
 
-        <com.google.android.material.button.MaterialButton
+        <!-- Continue / Grant permission button -->
+        <Button
             android:id="@+id/btnGrant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Continue"
-            style="@style/M3Button"
-            android:minWidth="180dp"/>
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:fontFamily="monospace"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:stateListAnimator="@null"/>
 
-        <com.google.android.material.button.MaterialButton
+        <!-- Hidden Shizuku / Debug button -->
+        <Button
             android:id="@+id/btnShizukuAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Open Shizuku"
             android:visibility="gone"
-            style="@style/M3Button.Tonal"
-            android:layout_marginTop="@dimen/spacing_md"/>
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
     </LinearLayout>
 
     <!-- Bottom spacer -->

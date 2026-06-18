@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/spacing_xxs"
+    android:layout_margin="8dp"
     android:foreground="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="@dimen/radius_md"
-    app:cardElevation="@dimen/elevation_none"
-    app:cardBackgroundColor="@color/bg_card"
-    app:strokeColor="@color/border_default"
-    app:strokeWidth="1dp">
+    card_view:cardElevation="6dp"
+    card_view:cardBackgroundColor="@android:color/transparent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/spacing_md"
-        android:gravity="center_vertical">
+        android:padding="14dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_bg_2">
 
         <!-- Module Name -->
         <TextView
@@ -32,16 +30,19 @@
             android:textStyle="bold"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textColor="@color/text_primary"
-            android:paddingEnd="@dimen/spacing_sm"/>
+            android:textColor="#FFFFFF"
+            android:paddingEnd="8dp"
+            android:fontFamily="monospace"/>
 
         <!-- Enable/Disable Switch -->
-        <com.google.android.material.switchmaterial.SwitchMaterial
+        <Switch
             android:id="@+id/moduleSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/spacing_sm" />
-
+			android:thumbTint="@color/switch_thumb_tint"
+			android:trackTint="@color/switch_thumb_tint"
+            android:paddingEnd="8dp" />
+		
         <!-- Delete Button -->
         <ImageButton
             android:id="@+id/moduleDelete"
@@ -49,6 +50,6 @@
             android:layout_height="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_del_module"
-            app:tint="@color/accent_error" />
+            android:tint="@android:color/holo_red_light" />
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>

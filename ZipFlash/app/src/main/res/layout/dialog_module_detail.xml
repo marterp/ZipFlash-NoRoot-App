@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="16dp">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingBottom="20dp"
+		android:gravity="center"
+		android:minWidth="280dp"
+		android:maxWidth="320dp"
+		android:background="@drawable/popup_bg_2">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/dialog_title_bg"
+			android:padding="12dp"
+			android:layout_marginBottom="8dp">
+
+			<TextView
+				android:id="@+id/dialogTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Module Title"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:layout_alignParentStart="true"
+				android:layout_centerVertical="true"/>
+
+			<ImageButton
+				android:id="@+id/btnClose"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@android:drawable/ic_menu_close_clear_cancel"
+				android:background="@android:color/transparent"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:padding="4dp"
+				android:layout_marginLeft="10dp"/>
+
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/descriptionLabel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Description: "
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="#DDDDDD"
+			android:layout_marginBottom="0dp"
+			android:gravity="left"
+			android:paddingLeft="12dp"/>
+
+		<TextView
+			android:id="@+id/dialogDescription"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Module description goes here..."
+			android:textSize="14sp"
+			android:textColor="#DDDDDD"
+			android:gravity="left"
+			android:paddingLeft="18dp"
+			android:paddingRight="12dp"
+			android:layout_marginBottom="20dp"
+			android:layout_gravity="fill"/>
+
+		<Button
+			android:id="@+id/dialogDownload"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Download"
+			android:textColor="#FFFFFF"
+			android:background="@drawable/btn_normal"
+			android:padding="10dp"
+			android:layout_gravity="right"
+			android:visibility="gone"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

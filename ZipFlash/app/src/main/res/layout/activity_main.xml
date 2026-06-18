@@ -5,21 +5,113 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_primary">
+    android:fontFamily="monospace"
+    android:background="#111111">
 
+    <!-- Main content -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="#111111"
+            android:titleTextColor="#CCCCCC"
+            app:popupTheme="@style/DarkPopupMenu" />
 
+        <!-- Buttons at the top -->
+        <!-- Buttons row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnSelect"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Select File"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_select"
+                android:fontFamily="monospace"
+                android:stateListAnimator="@null"/>
+                <!--android:drawableStart="@drawable/folder_zip"
+                android:drawablePadding="4dp"/>-->
+
+            <Button
+                android:id="@+id/btnRun"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Flash"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_run"
+                android:fontFamily="monospace"
+                android:stateListAnimator="@null"
+                android:enabled="false"/>
+               <!-- android:drawableStart="@drawable/ic_flash"
+                android:drawablePadding="4dp"/>-->
+        </LinearLayout>
+
+        <!-- ✅ Checkbox in its own row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+			android:visibility="gone"
+            android:layout_marginLeft="8dp">
+
+            <CheckBox
+                android:id="@+id/cbRevert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Output TextView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+			android:fadeScrollbars="true"
+			android:scrollbarFadeDuration="250"
+			android:scrollbarDefaultDelayBeforeFade="1000">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <TextView
+                    android:id="@+id/tvOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to ZipFlash!\n"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="monospace"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="true"
+                    android:textIsSelectable="true"
+                    android:scrollbars="horizontal" />
+            </HorizontalScrollView>
+
+        </ScrollView>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -27,11 +119,13 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/drawer_bg"
+        android:background="@color/teal_200"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        app:itemTextAppearance="?attr/textAppearanceLabelLarge"
+        android:fontFamily="monospace"
         app:itemTextColor="@color/nav_item_text_color"
         app:itemIconTint="@color/nav_item_icon_color"/>
-
+    
+    
+        
 </androidx.drawerlayout.widget.DrawerLayout>

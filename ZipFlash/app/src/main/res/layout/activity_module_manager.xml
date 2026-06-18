@@ -2,13 +2,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_primary">
+    android:fontFamily="monospace"
+    android:background="#111111">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/bg_primary" />
+        android:background="#111111"
+        android:titleTextColor="#CCCCCC"
+        android:fontFamily="monospace"
+        android:elevation="4dp" />
 
     <!-- Container for RecyclerView + Empty View -->
     <FrameLayout
@@ -16,25 +20,27 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <!-- RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingHorizontal="@dimen/spacing_sm"
-            android:paddingVertical="@dimen/spacing_xxs"
-            android:background="@color/bg_primary"
-            android:clipToPadding="false"/>
+            android:padding="4dp"
+            android:background="#111111" />
 
+        <!-- Empty state text -->
         <TextView
             android:id="@+id/emptyView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="No modules installed"
-            android:textColor="@color/text_muted"
+            android:textColor="#CCCCCC"
             android:visibility="gone"
             android:textSize="16sp"
-            android:padding="@dimen/spacing_md" />
+            android:fontFamily="monospace"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
 
     </FrameLayout>
 

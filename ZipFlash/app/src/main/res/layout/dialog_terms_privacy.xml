@@ -1,63 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/popup_bg"
-    android:padding="@dimen/spacing_md">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="@drawable/popup_bg"
+	android:padding="20dp">
 
-    <TextView
-        android:id="@+id/tvDialogTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Terms and Privacy Policy"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary"
-        android:gravity="center"
-        android:paddingBottom="@dimen/spacing_sm"/>
+	<TextView
+		android:id="@+id/tvDialogTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Terms and Privacy Policy"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:textColor="#FFFFFF"
+		android:gravity="center"
+		android:paddingBottom="12dp"
+		android:fontFamily="monospace"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:fadeScrollbars="true"
-        android:scrollbarFadeDuration="250"
-        android:scrollbarDefaultDelayBeforeFade="1000">
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="500dp"
+		android:fadeScrollbars="true"
+		android:scrollbarFadeDuration="250"
+		android:scrollbarDefaultDelayBeforeFade="1000">
 
-        <TextView
-            android:id="@+id/tvDialogContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_secondary"
-            android:textSize="15sp"
-            android:lineSpacingExtra="4dp"
-            android:gravity="top|start"
-            android:padding="@dimen/spacing_md"
-            android:inputType="textMultiLine"
-            android:scrollHorizontally="false"
-            android:ellipsize="none"
-            android:breakStrategy="simple"
-            android:text="@string/dialog_content"
-            android:textAlignment="viewStart"/>
+		<TextView
+			android:id="@+id/tvDialogContent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#CCCCCC"
+			android:textSize="15sp"
+			android:lineSpacingExtra="4dp"
+			android:gravity="top|start"
+			android:padding="16dp"
+			android:inputType="textMultiLine"
+			android:scrollHorizontally="false"
+			android:ellipsize="none"
+			android:breakStrategy="simple"
+			android:fontFamily="monospace"
+			android:text="@string/dialog_content"
+			android:textAlignment="center"/>
 
-    </ScrollView>
+	</ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingTop="@dimen/spacing_md">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:paddingTop="20dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnClose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Close"
-            style="@style/M3Button.Tonal"
-            android:minWidth="120dp"/>
+		<Button
+			android:id="@+id/btnClose"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Close"
+			android:textColor="#FFFFFF"
+			android:background="@drawable/btn_normal"
+			android:padding="10dp"
+			android:fontFamily="monospace"/>
 
-    </LinearLayout>
+	</LinearLayout>
 
 </LinearLayout>
+

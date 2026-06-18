@@ -17,7 +17,26 @@ For more info and updates visit:
 <font color="#2196F3"><a href="https://zip-flash-modules.vercel.app/">zipflash website</a></font>
 		]]></string>
         
-    <string name="dialog_content">
+        
+    <!-- res/values/strings.xml -->
+    <string name="update_dialog_title">Update Available!</string>
+    <string name="update_dialog_title_description">Dialog title: Update Available</string>
+    <string name="changelog_default">Changelog will be displayed here.</string>
+    <string name="changelog_description">Changelog for the update</string>
+    <string name="update_button_text">Update!</string>
+    <string name="update_button_description">Button to start the update</string>
+	
+	
+	
+	<string name="enabling_module">Enabling %1$s…</string>
+	<string name="disabling_module">Disabling %1$s…</string>
+	<string name="removing_module">Removing %1$s…</string>
+	<string name="confirm_remove_message">Are you sure you want to remove the module %1$s?</string>
+	<string name="shizuku_missing">Shizuku is not available. Please grant permissions.</string>
+	<string name="error_enabling">Error enabling %1$s: %2$s</string>
+	<string name="error_disabling">Error disabling %1$s: %2$s</string>
+	<string name="error_deleting">Error deleting %1$s: %2$s</string>
+	<string name="dialog_content">
 		Welcome to ZipFlash No Root.
 \n\n
 		By installing and using this application, you acknowledge and agree to the following terms and conditions:
@@ -45,15 +64,6 @@ For more info and updates visit:
 		Additional open source libraries may be used in this application. Their respective licenses and attributions are available upon request.
 \n\n
 		Copyright © 2025 ZipFlash. All rights reserved.
-        </string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="shortcut_flash">Flash</string>
-    <string name="shortcut_flash_long">Open Flash</string>
-    <string name="shortcut_shell">Shell</string>
-    <string name="shortcut_shell_long">Open Shell</string>
-    <string name="shortcut_modules">Modules</string>
-    <string name="shortcut_modules_long">Open Modules</string>
-    <string name="shortcut_disabled">App updated</string>
+		</string>
+        
 </resources>

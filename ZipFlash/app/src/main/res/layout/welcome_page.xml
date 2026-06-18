@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient_welcome">
+    android:background="#111111">
+   
 
     <!-- Top spacer -->
     <Space
@@ -16,49 +17,45 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingHorizontal="@dimen/spacing_lg">
+        android:gravity="center_horizontal">
 
-        <!-- App Icon -->
-        <ImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="ZipFlash Icon"
-            android:layout_marginBottom="@dimen/spacing_md"/>
-
-        <!-- Title -->
+        <!-- Title TextView -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome to ZipFlash!"
-            android:textSize="28sp"
+            android:textSize="32sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:paddingBottom="@dimen/spacing_sm"
-            android:textColor="@color/text_primary"/>
+            android:paddingBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="monospace"/>
 
-        <!-- Message -->
+        <!-- Engaging message TextView -->
         <TextView
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thanks for installing ZipFlash!\n\nReady to unleash your phone\u2019s full potential?"
-            android:textSize="16sp"
+            android:text="Thanks for installing ZipFlash!\n\nReady to unleash your phone’s full potential?"
+            android:textSize="18sp"
             android:gravity="center"
-            android:paddingBottom="@dimen/spacing_lg"
-            android:textColor="@color/text_secondary"
-            android:lineSpacingExtra="4dp"/>
+            android:paddingBottom="24dp"
+            android:textColor="#CCCCCC"
+            android:fontFamily="monospace"/>
 
         <!-- Get Started Button -->
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Get Started"
-            style="@style/M3Button"
-            android:minWidth="200dp"/>
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_normal"
+            android:fontFamily="monospace"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:stateListAnimator="@null"/>
     </LinearLayout>
 
     <!-- Bottom spacer -->
